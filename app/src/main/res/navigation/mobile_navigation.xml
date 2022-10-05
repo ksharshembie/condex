@@ -28,5 +28,11 @@
         android:name="com.ksharshembie.condex.ui.profile.ProfileFragment"
         android:label="@string/title_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/customerFragment"
+        android:name="com.ksharshembie.condex.ui.customer.CustomerFragment"
+        android:label="@string/new_customer"
+        tools:layout="@layout/fragment_customer" />
+
 
 </navigation>
