@@ -7,5 +7,10 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="new_customer">New Customer</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="customer_name">Name</string>
+    <string name="customer_address">Address</string>
+    <string name="customer_mobile_phone">Mobile Phone</string>
 
 </resources>
