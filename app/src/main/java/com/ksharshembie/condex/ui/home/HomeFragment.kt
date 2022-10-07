@@ -30,8 +30,8 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.fabAdd.setOnClickListener {
-            findNavController().navigate(R.id.customerFragment)
+        binding.menuArticle.setOnClickListener {
+            findNavController().navigate(R.id.articleFragment)
         }
     }
 

@@ -12,5 +12,8 @@
     <string name="customer_name">Name</string>
     <string name="customer_address">Address</string>
     <string name="customer_mobile_phone">Mobile Phone</string>
+    <string name="title_article">Article</string>
+    <string name="title_add_article">Add Article</string>
+    <string name="article_name">Name</string>
 
 </resources>

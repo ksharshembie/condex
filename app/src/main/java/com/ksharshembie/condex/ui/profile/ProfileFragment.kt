@@ -27,7 +27,7 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.ivProfile.setOnClickListener {
-            imagePickup.launch("image/*")
+            //imagePickup.launch("image/*")
         }
     }
 
