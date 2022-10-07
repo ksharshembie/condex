@@ -1,7 +1,7 @@
 <resources>
-    <string name="app_name">Condex</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+    <string name="app_name">In-Market</string>
+    <string name="title_home">Warehouse</string>
+    <string name="title_dashboard">Market</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profile</string>
     <!-- TODO: Remove or change this placeholder text -->
