@@ -15,5 +15,10 @@
     <string name="title_article">Article</string>
     <string name="title_add_article">Add Article</string>
     <string name="article_name">Name</string>
+    <string name="article_vendor_code">Vendor Code</string>
+    <string name="please_fill_article_code">Please fill Article Name</string>
+    <string name="please_fill_article_vendor_code">Please fill Vendor Code</string>
+    <string name="name">Name:</string>
+    <string name="vendor_code">Vendor Code:</string>
 
 </resources>

@@ -2,6 +2,7 @@ package com.ksharshembie.condex
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isVisible
 import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
@@ -37,5 +38,14 @@ class MainActivity : AppCompatActivity() {
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+        navController.addOnDestinationChangedListener { controller, destination, arguments ->
+            if (destination.id == R.id.navigation_home || destination.id == R.id.navigation_dashboard
+                || destination.id == R.id.navigation_notifications || destination.id == R.id.navigation_profile
+            ) {
+                navView.isVisible = true
+            } else {
+                navView.isVisible = false
+            }
+        }
     }
 }

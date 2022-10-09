@@ -20,5 +20,6 @@
         <item name="boxCornerRadiusBottomEnd">8dp</item>
         <item name="boxBackgroundMode">outline</item>
         <item name="boxStrokeColor">@color/white</item>
+        <item name="hintTextColor">@color/white</item>
     </style>
 </resources>
