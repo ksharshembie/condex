@@ -20,13 +20,13 @@ class ArticleFragment : Fragment() {
         super.onCreate(savedInstanceState)
         adapter = ArticleAdapter(){ pos ->
             val alertDialog = AlertDialog.Builder(requireContext())
-            alertDialog.setTitle("Delete?")
-            alertDialog.setPositiveButton("Yes"){ dialog, _ ->
+            alertDialog.setTitle(getString(R.string.delete))
+            alertDialog.setPositiveButton(getString(R.string.yes)){ dialog, _ ->
                 App.db.dao().delete(adapter.getArticle(pos))
                 setArticleData()
                 dialog.dismiss()
             }
-            alertDialog.setNegativeButton("No"){ dialog, _ ->
+            alertDialog.setNegativeButton(getString(R.string.no)){ dialog, _ ->
                 dialog.dismiss()
             }
             alertDialog.create().show()

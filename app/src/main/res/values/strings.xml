@@ -20,5 +20,8 @@
     <string name="please_fill_article_vendor_code">Please fill Vendor Code</string>
     <string name="name">Name:</string>
     <string name="vendor_code">Vendor Code:</string>
+    <string name="delete">Delete?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
 
 </resources>
