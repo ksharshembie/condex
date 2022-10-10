@@ -9,12 +9,34 @@
     <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/iv_profile"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
         android:src="@drawable/ic_profile_black_24dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="64dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_stock"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="@dimen/std_margin"
+        android:src="@drawable/ic_stock_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/menu_article"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/menu_article"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_margin="@dimen/std_margin"
+        android:src="@drawable/ic_article_24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/menu_stock"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

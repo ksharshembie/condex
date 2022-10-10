@@ -1,19 +1,16 @@
-package com.ksharshembie.condex.ui.home.article
+package com.ksharshembie.condex.ui.profile.article
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResultListener
 import androidx.navigation.fragment.findNavController
 import com.ksharshembie.condex.App
 import com.ksharshembie.condex.R
-import com.ksharshembie.condex.databinding.FragmentArticleAddBinding
 import com.ksharshembie.condex.databinding.FragmentArticleBinding
-import com.ksharshembie.condex.localData.entity.Article
-import com.ksharshembie.condex.ui.home.article.adapter.ArticleAdapter
+import com.ksharshembie.condex.ui.profile.article.adapter.ArticleAdapter
 
 class ArticleFragment : Fragment() {
     private lateinit var binding: FragmentArticleBinding
@@ -21,7 +18,19 @@ class ArticleFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        adapter = ArticleAdapter()
+        adapter = ArticleAdapter(){ pos ->
+            val alertDialog = AlertDialog.Builder(requireContext())
+            alertDialog.setTitle("Delete?")
+            alertDialog.setPositiveButton("Yes"){ dialog, _ ->
+                App.db.dao().delete(adapter.getArticle(pos))
+                setArticleData()
+                dialog.dismiss()
+            }
+            alertDialog.setNegativeButton("No"){ dialog, _ ->
+                dialog.dismiss()
+            }
+            alertDialog.create().show()
+        }
     }
 
     override fun onCreateView(
@@ -38,8 +47,13 @@ class ArticleFragment : Fragment() {
         binding.fabAdd.setOnClickListener {
             findNavController().navigate(R.id.articleAddFragment)
         }
-        val list = App.db.dao().getAllArticle()
+
         binding.articleRecyclerView.adapter = adapter
+        setArticleData()
+    }
+
+    fun setArticleData(){
+        val list = App.db.dao().getAllArticle()
         adapter.addArticles(list)
     }
 

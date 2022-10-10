@@ -1,13 +1,11 @@
-package com.ksharshembie.condex.ui.home.article
+package com.ksharshembie.condex.ui.profile.article
 
 import android.os.Bundle
 import android.text.TextUtils
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.os.bundleOf
 import androidx.fragment.app.Fragment
-import androidx.fragment.app.setFragmentResult
 import androidx.navigation.fragment.findNavController
 import com.ksharshembie.condex.App
 import com.ksharshembie.condex.R

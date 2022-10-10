@@ -35,12 +35,12 @@
         tools:layout="@layout/fragment_customer" />
     <fragment
         android:id="@+id/articleFragment"
-        android:name="com.ksharshembie.condex.ui.home.article.ArticleFragment"
+        android:name="com.ksharshembie.condex.ui.profile.article.ArticleFragment"
         android:label="@string/title_article"
         tools:layout="@layout/fragment_article" />
     <fragment
         android:id="@+id/articleAddFragment"
-        android:name="com.ksharshembie.condex.ui.home.article.ArticleAddFragment"
+        android:name="com.ksharshembie.condex.ui.profile.article.ArticleAddFragment"
         android:label="@string/title_add_article"
         tools:layout="@layout/fragment_article_add" />
 

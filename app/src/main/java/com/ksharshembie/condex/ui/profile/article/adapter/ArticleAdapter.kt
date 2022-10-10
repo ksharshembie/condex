@@ -1,4 +1,4 @@
-package com.ksharshembie.condex.ui.home.article.adapter
+package com.ksharshembie.condex.ui.profile.article.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -6,7 +6,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ksharshembie.condex.databinding.ItemArticleBinding
 import com.ksharshembie.condex.localData.entity.Article
 
-class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
+class ArticleAdapter(private val onLongClick: (Int) -> Unit) :
+    RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() {
 
     private val data = arrayListOf<Article>()
 
@@ -29,14 +30,18 @@ class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() 
     }
 
     fun addArticle(article: Article) {
-        data.add(0,article)
+        data.add(0, article)
         notifyItemChanged(0)
     }
 
-    fun addArticles(list: List<Article>){
+    fun addArticles(list: List<Article>) {
         data.clear()
         data.addAll(list)
         notifyDataSetChanged()
+    }
+
+    fun getArticle( position: Int): Article {
+        return data[position]
     }
 
     inner class ArticleViewHolder(private val binding: ItemArticleBinding) :
@@ -44,6 +49,10 @@ class ArticleAdapter : RecyclerView.Adapter<ArticleAdapter.ArticleViewHolder>() 
         fun bind(article: Article) {
             binding.tvArticleName.text = article.name
             binding.tvArticleVendorCode.text = article.vendorCode
+            itemView.setOnLongClickListener {
+                onLongClick(adapterPosition)
+                false
+            }
         }
 
     }

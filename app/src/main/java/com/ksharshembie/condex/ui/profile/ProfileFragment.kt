@@ -7,6 +7,8 @@ import android.view.ViewGroup
 import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
+import com.ksharshembie.condex.R
 import com.ksharshembie.condex.databinding.FragmentProfileBinding
 
 class ProfileFragment : Fragment() {
@@ -27,7 +29,11 @@ class ProfileFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.ivProfile.setOnClickListener {
-            //imagePickup.launch("image/*")
+            imagePickup.launch("image/*")
+        }
+
+        binding.menuArticle.setOnClickListener {
+            findNavController().navigate(R.id.articleFragment)
         }
     }
 

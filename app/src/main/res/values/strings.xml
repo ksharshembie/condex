@@ -1,9 +1,9 @@
 <resources>
     <string name="app_name">In-Market</string>
     <string name="title_home">Warehouse</string>
-    <string name="title_dashboard">Market</string>
+    <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
-    <string name="title_profile">Profile</string>
+    <string name="title_profile">Settings</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="new_customer">New Customer</string>
