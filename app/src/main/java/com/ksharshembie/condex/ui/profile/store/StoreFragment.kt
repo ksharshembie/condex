@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.ksharshembie.condex.App
@@ -19,7 +20,19 @@ class StoreFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        adapter = StoreAdapter()
+        adapter = StoreAdapter(){ pos ->
+            val alertDialog = AlertDialog.Builder(requireContext())
+            alertDialog.setTitle(getString(R.string.delete))
+            alertDialog.setPositiveButton(getString(R.string.yes)){ dialog, _ ->
+                App.db.daoStore().delete(adapter.getStore(pos))
+                setStoreData()
+                dialog.dismiss()
+            }
+            alertDialog.setNegativeButton(getString(R.string.no)){ dialog, _ ->
+                dialog.dismiss()
+            }
+            alertDialog.create().show()
+        }
     }
 
     override fun onCreateView(

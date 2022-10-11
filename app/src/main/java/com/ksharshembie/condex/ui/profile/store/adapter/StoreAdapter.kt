@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.ksharshembie.condex.databinding.ItemStoreBinding
 import com.ksharshembie.condex.localData.entity.Store
 
-class StoreAdapter : RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
+class StoreAdapter(private val onLongClick: (Int) -> Unit) : RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
     private val data = arrayListOf<Store>()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): StoreViewHolder {
@@ -33,12 +33,19 @@ class StoreAdapter : RecyclerView.Adapter<StoreAdapter.StoreViewHolder>() {
         notifyDataSetChanged()
     }
 
+    fun getStore(pos: Int): Store{
+        return data[pos]
+    }
+
     inner class StoreViewHolder(private var binding: ItemStoreBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(store: Store) {
             binding.tvStoreName.text = store.name
             binding.tvStoreAddress.text = store.address
+            itemView.setOnLongClickListener {
+                onLongClick(adapterPosition)
+                false
+            }
         }
-
     }
 }
