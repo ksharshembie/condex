@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.PagerSnapHelper
 import com.ksharshembie.condex.App
 import com.ksharshembie.condex.R
 import com.ksharshembie.condex.databinding.FragmentCustomerBinding
@@ -39,6 +40,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        val pagerSnapHelper = PagerSnapHelper()
+        pagerSnapHelper.attachToRecyclerView(binding.storesRecyclerView)
+
         binding.storesRecyclerView.adapter = adapter
         val list = App.db.daoStore().getAllStore()
         adapter.addStores(list)

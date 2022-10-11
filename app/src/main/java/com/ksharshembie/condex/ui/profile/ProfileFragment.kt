@@ -28,9 +28,9 @@ class ProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.ivProfile.setOnClickListener {
-            imagePickup.launch("image/*")
-        }
+        //binding.ivProfile.setOnClickListener {
+        //    imagePickup.launch("image/*")
+        //}
 
         binding.menuArticle.setOnClickListener {
             findNavController().navigate(R.id.articleFragment)
@@ -40,9 +40,9 @@ class ProfileFragment : Fragment() {
         }
     }
 
-    private val imagePickup = registerForActivityResult(ActivityResultContracts.GetContent(),
-        ActivityResultCallback {
-            binding.ivProfile.setImageURI(it)
-        })
+    //private val imagePickup = registerForActivityResult(ActivityResultContracts.GetContent(),
+        //ActivityResultCallback {
+        //    binding.ivProfile.setImageURI(it)
+        //})
 
 }
