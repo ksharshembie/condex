@@ -35,6 +35,9 @@ class ProfileFragment : Fragment() {
         binding.menuArticle.setOnClickListener {
             findNavController().navigate(R.id.articleFragment)
         }
+        binding.menuStore.setOnClickListener {
+            findNavController().navigate(R.id.storeFragment)
+        }
     }
 
     private val imagePickup = registerForActivityResult(ActivityResultContracts.GetContent(),

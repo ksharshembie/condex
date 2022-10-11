@@ -1,14 +1,14 @@
 package com.ksharshembie.condex.localData.entity
 
-
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 import java.io.Serializable
 
 @Entity
-data class Article(
+data class Store(
     @PrimaryKey(autoGenerate = true)
-    var idArticle: Long? = null,
+    var idStore: Long? = null,
     var name: String,
-    var vendorCode: String
+    var code: String,
+    var address: String
 ) : Serializable

@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">In-Market</string>
-    <string name="title_home">Warehouse</string>
+    <string name="title_home">Home</string>
     <string name="title_dashboard">Dashboard</string>
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Settings</string>
@@ -23,5 +23,11 @@
     <string name="delete">Delete?</string>
     <string name="yes">Yes</string>
     <string name="no">No</string>
+    <string name="title_store">Store</string>
+    <string name="title_add_store">Add Store</string>
+    <string name="code">Code</string>
+    <string name="address">Address:</string>
+    <string name="please_fill_store_name">Please fill store name</string>
+    <string name="store_name">Store Name</string>
 
 </resources>

@@ -9,6 +9,7 @@ class App : Application() {
     override fun onCreate() {
         super.onCreate()
         db = Room.databaseBuilder(this, Database::class.java, "database").allowMainThreadQueries()
+            .fallbackToDestructiveMigration()
             .build()
     }
 

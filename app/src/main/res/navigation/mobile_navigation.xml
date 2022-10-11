@@ -43,6 +43,16 @@
         android:name="com.ksharshembie.condex.ui.profile.article.ArticleAddFragment"
         android:label="@string/title_add_article"
         tools:layout="@layout/fragment_article_add" />
+    <fragment
+        android:id="@+id/storeFragment"
+        android:name="com.ksharshembie.condex.ui.profile.store.StoreFragment"
+        android:label="@string/title_store"
+        tools:layout="@layout/fragment_store" />
+    <fragment
+        android:id="@+id/storeAddFragment"
+        android:name="com.ksharshembie.condex.ui.profile.store.StoreAddFragment"
+        android:label="@string/title_add_store"
+        tools:layout="@layout/fragment_store_add" />
 
 
 </navigation>
