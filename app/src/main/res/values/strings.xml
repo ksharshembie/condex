@@ -29,5 +29,9 @@
     <string name="address">Address:</string>
     <string name="please_fill_store_name">Please fill store name</string>
     <string name="store_name">Store Name</string>
+    <string name="store">Store</string>
+    <string name="stock_in">Stock-In</string>
+    <string name="stock_out">Stock-Out</string>
+    <string name="stock_transfer">Transfer</string>
 
 </resources>
