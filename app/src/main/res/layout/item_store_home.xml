@@ -49,6 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stock_in"
+        style="@style/btn_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/stockOut"
         app:layout_constraintStart_toStartOf="parent" />
@@ -59,6 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="@dimen/std_margin"
         android:text="@string/stock_out"
+        style="@style/btn_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@id/stockTransfer"
         app:layout_constraintStart_toEndOf="@id/stockIn" />
@@ -68,6 +70,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/stock_transfer"
+        style="@style/btn_style"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/stockOut" />
